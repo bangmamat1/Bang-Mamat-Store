@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form Pendaftaran</title>
-<link rel="stylesheet" type="text/css" href="daftar.css">
-<!-- Skrip JavaScript menggunakan modul -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="daftar.css">
+    <!-- Skrip JavaScript menggunakan modul -->
     <script type="module" src="firebase-script.js"></script>
 </head>
 <body>
@@ -13,21 +13,25 @@
 <div class="container">
     <h2>Form Pendaftaran</h2>
     <form id="registrationForm" action="#" method="post">
-        <label for="name">Nama:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <label for="confirm_password">Konfirmasi Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
+        <div class="form-group">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm_password">Konfirmasi Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+        </div>
         <div id="passwordError" class="error"></div>
-        <input type="submit" value="Daftar">
+        <button type="submit">Daftar</button>
     </form>
-    <div id="privacyPolicy">
-        <a href="privacy_policy.html">Kebijakan Privasi</a>
-    </div>
-    <div id="captcha"></div>
 </div>
 
 <script src="daftar.js"></script>
